@@ -64,10 +64,10 @@ class PlaneModel extends \AppBundle\Entity\PlaneModel implements \Doctrine\ORM\P
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'isAvaliable'];
+            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'isAvaliable'];
+        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'model', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'manufacturer', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'cruiseSpeed', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'planeNbSeats', '' . "\0" . 'AppBundle\\Entity\\PlaneModel' . "\0" . 'isAvailable'];
     }
 
     /**
@@ -279,23 +279,23 @@ class PlaneModel extends \AppBundle\Entity\PlaneModel implements \Doctrine\ORM\P
     /**
      * {@inheritDoc}
      */
-    public function setIsAvaliable($isAvaliable)
+    public function setisAvailable($isAvailable)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsAvaliable', [$isAvaliable]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setisAvailable', [$isAvailable]);
 
-        return parent::setIsAvaliable($isAvaliable);
+        return parent::setIsAvailable($isAvailable);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getIsAvaliable()
+    public function getIsAvailable()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsAvaliable', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsAvailable', []);
 
-        return parent::getIsAvaliable();
+        return parent::getIsAvailable();
     }
 
 }

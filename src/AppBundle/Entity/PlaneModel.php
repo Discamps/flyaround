@@ -52,9 +52,9 @@ class PlaneModel
     /**
      * @var bool
      *
-     * @ORM\Column(name="isAvaliable", type="boolean")
+     * @ORM\Column(name="isAvailable", type="boolean")
      */
-    private $isAvaliable;
+    private $isAvailable;
 
 
     /**
@@ -164,27 +164,27 @@ class PlaneModel
     }
 
     /**
-     * Set isAvaliable
+     * Set isAvailable
      *
-     * @param boolean $isAvaliable
+     * @param boolean $isAvailable
      *
      * @return PlaneModel
      */
-    public function setIsAvaliable($isAvaliable)
+    public function setisAvailable($isAvailable)
     {
-        $this->isAvaliable = $isAvaliable;
+        $this->isAvailable = $isAvailable;
 
         return $this;
     }
 
     /**
-     * Get isAvaliable
+     * Get isAvailable
      *
      * @return bool
      */
-    public function getIsAvaliable()
+    public function getisAvailable()
     {
-        return $this->isAvaliable;
+        return $this->isAvailable;
     }
 }
 

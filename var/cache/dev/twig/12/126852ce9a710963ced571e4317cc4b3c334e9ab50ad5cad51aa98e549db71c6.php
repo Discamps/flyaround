@@ -56,7 +56,7 @@ class __TwigTemplate_00730069c748586d8015216af7bf44b7f349258eede2bad2ed36a2d7df7
                 <th>Manufacturer</th>
                 <th>Cruisespeed</th>
                 <th>Planenbseats</th>
-                <th>Isavaliable</th>
+                <th>Isavailable</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -92,7 +92,7 @@ class __TwigTemplate_00730069c748586d8015216af7bf44b7f349258eede2bad2ed36a2d7df7
             echo "</td>
                 <td>";
             // line 26
-            if ($this->getAttribute($context["planeModel"], "isAvaliable", array())) {
+            if ($this->getAttribute($context["planeModel"], "isAvailable", array())) {
                 echo "Yes";
             } else {
                 echo "No";
@@ -179,7 +179,7 @@ class __TwigTemplate_00730069c748586d8015216af7bf44b7f349258eede2bad2ed36a2d7df7
                 <th>Manufacturer</th>
                 <th>Cruisespeed</th>
                 <th>Planenbseats</th>
-                <th>Isavaliable</th>
+                <th>Isavailable</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -191,7 +191,7 @@ class __TwigTemplate_00730069c748586d8015216af7bf44b7f349258eede2bad2ed36a2d7df7
                 <td>{{ planeModel.manufacturer }}</td>
                 <td>{{ planeModel.cruiseSpeed }}</td>
                 <td>{{ planeModel.planeNbSeats }}</td>
-                <td>{% if planeModel.isAvaliable %}Yes{% else %}No{% endif %}</td>
+                <td>{% if planeModel.isAvailable %}Yes{% else %}No{% endif %}</td>
                 <td>
                     <ul>
                         <li>
