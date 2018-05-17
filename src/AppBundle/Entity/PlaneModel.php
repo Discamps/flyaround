@@ -12,6 +12,25 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class PlaneModel
 {
+    /*
+     * Adding personal methods / variables
+     */
+
+    public function __toString()
+    {
+        // Return the planeModel object with "[MANUFACTURER] - [MODEL]" format, when __toString is called.
+        return $this->manufacturer . " - " . $this->model;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="plane")
+     */
+    private $plane;
+
+    /*
+     * Auto-generated methods / variables
+     */
+
     /**
      * @var int
      *
@@ -170,7 +189,7 @@ class PlaneModel
      *
      * @return PlaneModel
      */
-    public function setisAvailable($isAvailable)
+    public function setIsAvailable($isAvailable)
     {
         $this->isAvailable = $isAvailable;
 
@@ -182,9 +201,49 @@ class PlaneModel
      *
      * @return bool
      */
-    public function getisAvailable()
+    public function getIsAvailable()
     {
         return $this->isAvailable;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->plane = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Add plane
+     *
+     * @param \AppBundle\Entity\Flight $plane
+     *
+     * @return PlaneModel
+     */
+    public function addPlane(\AppBundle\Entity\Flight $plane)
+    {
+        $this->plane[] = $plane;
+
+        return $this;
+    }
+
+    /**
+     * Remove plane
+     *
+     * @param \AppBundle\Entity\Flight $plane
+     */
+    public function removePlane(\AppBundle\Entity\Flight $plane)
+    {
+        $this->plane->removeElement($plane);
+    }
+
+    /**
+     * Get plane
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getPlane()
+    {
+        return $this->plane;
+    }
+}
