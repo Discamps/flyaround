@@ -27,11 +27,6 @@ class Site
      */
     private $departures;
 
-    /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="arrival")
-     */
-    private $arrival;
-
     /*
      * Auto-generated methods / variables
      */
@@ -42,6 +37,7 @@ class Site
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="arrival")
      */
     private $id;
 
@@ -284,5 +280,21 @@ class Site
     public function getArrival()
     {
         return $this->arrival;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getArrivals()
+    {
+        return $this->arrivals;
+    }
+
+    /**
+     * @param mixed $arrivals
+     */
+    public function setArrivals($arrivals)
+    {
+        $this->arrivals = $arrivals;
     }
 }
