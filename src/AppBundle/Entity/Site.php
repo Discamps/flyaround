@@ -31,7 +31,8 @@ class Site
      * Auto-generated methods / variables
      */
 
-gt     * @var int
+     /**
+      * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id

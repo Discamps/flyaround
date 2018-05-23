@@ -92,3 +92,6 @@ a4fbf6,127.0.0.1,GET,http://localhost:8000/PLANE,1527097733,,404
 3ecbfa,127.0.0.1,GET,http://localhost:8000/planemodel,1527097793,,301
 fbe4b0,127.0.0.1,GET,http://localhost:8000/planemodel/,1527097794,,200
 b7dea0,127.0.0.1,GET,http://localhost:8000/,1527098073,,200
+759379,127.0.0.1,GET,http://localhost:8000/,1527098795,,200
+ab4881,127.0.0.1,GET,http://localhost:8000/planemodel/,1527098963,,200
+31d9ec,127.0.0.1,GET,http://localhost:8000/,1527099028,,200
