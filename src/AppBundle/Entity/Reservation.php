@@ -19,7 +19,7 @@ class Reservation
     public function __toString()
     {
         // Return the reservation object with "[ID]" format, when __toString is called.
-        return $this->id;
+        return strval($this->id);
     }
 
     /**
@@ -29,7 +29,7 @@ class Reservation
     private $passenger;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Flight", inversedBy="flight")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Flight", inversedBy="reservations")
      * @ORM\JoinColumn(nullable=false)
      */
     private $flight;

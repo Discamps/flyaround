@@ -29,7 +29,7 @@ class Flight
     private $departure;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Site", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Site", inversedBy="arrivals")
      * @ORM\JoinColumn(nullable=false)
      */
     private $arrival;
@@ -49,7 +49,7 @@ class Flight
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="flight")
      */
-    private $flight;
+    private $reservations;
 
     /*
      * Auto-generated methods / variables
@@ -396,5 +396,39 @@ class Flight
     public function getFlight()
     {
         return $this->flight;
+    }
+
+    /**
+     * Add reservation
+     *
+     * @param \AppBundle\Entity\Reservation $reservation
+     *
+     * @return Flight
+     */
+    public function addReservation(\AppBundle\Entity\Reservation $reservation)
+    {
+        $this->reservations[] = $reservation;
+
+        return $this;
+    }
+
+    /**
+     * Remove reservation
+     *
+     * @param \AppBundle\Entity\Reservation $reservation
+     */
+    public function removeReservation(\AppBundle\Entity\Reservation $reservation)
+    {
+        $this->reservations->removeElement($reservation);
+    }
+
+    /**
+     * Get reservations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReservations()
+    {
+        return $this->reservations;
     }
 }
