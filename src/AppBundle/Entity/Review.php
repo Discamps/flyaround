@@ -12,15 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Review
 {
-    /*
-     * Adding personal methods / variables
-     */
 
-    public function __toString()
-    {
-        // Return the review object with "[ID]" format, when __toString is called.
-        return strval($this->id) ;
-    }
 
     /**
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User")
@@ -33,6 +25,16 @@ class Review
      * @ORM\JoinColumn(nullable=false)
      */
     private $reviewAuthor;
+
+    /*
+     * Adding personal methods / variables
+     */
+
+    public function __toString()
+    {
+        // Return the review object with "[ID]" format, when __toString is called.
+        return $this->id ;
+    }
 
     /*
      * Auto-generated methods / variables
