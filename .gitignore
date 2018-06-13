@@ -1,5 +1,6 @@
 .idea/workspace.xm
 .idea
+.idea/
 /.web-server-pid
 /build/
 /phpunit.xml
