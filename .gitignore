@@ -18,3 +18,5 @@
 /vendor/
 /web/bundles/p
 *.php~
+node_modules/
+web/build/
