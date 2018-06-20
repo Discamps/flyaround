@@ -9,6 +9,4 @@ parameters:
     mailer_host: smtp.mailtrap.io
     mailer_user: 3453382c68c634
     mailer_password: 0d5c4db653a5c3
-    mailer_auth_mode: cram-md5
-    mailer_port: 2525
     secret: ThisTokenIsNotSoSecretChangeIt

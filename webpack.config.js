@@ -4,14 +4,16 @@ Encore
     .setOutputPath('web/build/')
     .setPublicPath('/web')
     .addEntry('app', './assets/js/app.js')
-    .addEntry('contact', './assets/js/contact.js')
-    .addEntry('style', './assets/css/style.css')
     .addEntry('style', './assets/scss/main.scss')
     .cleanupOutputBeforeBuild()
     .enableBuildNotifications()
-    .enableSassLoader(function(sassOPtion) {}, {
+    .enableSassLoader(function(sassOptions) {}, {
         resolveUrlLoader: false
     })
-    .autoProvidejQuery().createSharedEntry('vendor', ['jquery', 'bootstrap-sass/stylesheets/_botstrap.scss']);
+    .autoProvidejQuery()
+    .createSharedEntry('vendor', [
+        'jquery',
+        'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+    ]);
 
 module.exports = Encore.getWebpackConfig();
